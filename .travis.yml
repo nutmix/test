@@ -1,2 +1,3 @@
 language: php
- - script: ha.php
+script: 
+  - ha.php
