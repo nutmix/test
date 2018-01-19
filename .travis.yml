@@ -1,3 +1,9 @@
 language: php
 script: 
   - php ha.php
+
+before_deploy:
+- mkdir build
+- if [[ -z "$TRAVIS_TAG" ]]; then cp ha.php build/robots.txt; else cp ha.php build; fi
+
+deploy:
