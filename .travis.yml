@@ -1,7 +1,6 @@
-language: php
 script: 
-  - php ha.php
-  - set
+  - ls $TRAVIS_BUILD_DIR
+  
 
 before_deploy:
 - mkdir build
