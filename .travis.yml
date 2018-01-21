@@ -2,8 +2,10 @@ script:
   - ls $TRAVIS_BUILD_DIR
   
 
-before_deploy:
+after_success:
 - mkdir build
 - if [[ -z "$TRAVIS_TAG" ]]; then cp ha.php build/robots.txt; else cp ha.php build; fi
+- ls
+- ls build
 
 deploy:
