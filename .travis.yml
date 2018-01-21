@@ -4,6 +4,7 @@ script:
 
 after_success:
 - mkdir build
+- echo $TRAVIS_TAG
 - if [[ -z "$TRAVIS_TAG" ]]; then cp ha.php build/robots.txt; else cp ha.php build; fi
 - ls
 - ls build
